@@ -47,7 +47,7 @@ def start(bot, update):
     bot.send_message(chat_id = update.message.chat_id, text = 'watch2gether-bot is ready for serve you.', reply_markup= initial_keyboard())
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
-updater = Updater(token = '444813380:AAGY4Fnq6M-8hrZjX2ze_UWCdX3WAWxeuK4')
+updater = Updater(token = TOKEN)
 dispatcher = updater.dispatcher
 
 button_handler = CallbackQueryHandler(button)
