@@ -37,7 +37,7 @@ def start(bot, update):
     bot.send_message(chat_id = update.message.chat_id, text = start_msg, reply_markup = markup)
 
 def main():
-    updater = Updater(token = '444813380:AAGY4Fnq6M-8hrZjX2ze_UWCdX3WAWxeuK4')
+    updater = Updater(token = TOKEN)
     dispatcher = updater.dispatcher
 
     start_handler = CommandHandler('start', start)
