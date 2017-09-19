@@ -70,6 +70,7 @@ def start(bot, update):
     start_msg = r'watch2gether-bot is at your service. Click Create button to create a room. Click View button to view aviliable rooms'
     bot.send_message(chat_id = update.message.chat_id, text = start_msg, reply_markup = markup)
 
+
 def main():
     updater = Updater(token = 'TOKEN')
     dispatcher = updater.dispatcher
