@@ -5,6 +5,7 @@ import sqlite3
 import datetime
 import time
 import threading
+import os
 
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
@@ -22,8 +23,10 @@ def create_room(bot, update):
                             text = "I'm opening room for you, please hang on.")
         chrome_options = Options() 
         chrome_options.add_argument("--headless")
-
-        driver = webdriver.Chrome(executable_path=r"C:\Users\Chris\Desktop\teleBot\teleBot\teleBot\chromedriver.exe", chrome_options = chrome_options)
+        if os.name == "nt":
+                driver = webdriver.Chrome(executable_path=r"C:\Users\Chris\Desktop\teleBot\teleBot\teleBot\chromedriver.exe", chrome_options = chrome_options)
+        elif os.name == "posix":
+                driver = webdriver.Chrome("./chromedriver" , chrome_options = chrome_options)
         driver.wait = WebDriverWait(driver, 5)
 
         driver.get('https://www.watch2gether.com') #going to site
@@ -108,7 +111,7 @@ def start(bot, update):
     bot.send_message(chat_id = update.message.chat_id, text = start_msg, reply_markup = markup)
 
 def main():
-    updater = Updater(token = '444813380:AAGY4Fnq6M-8hrZjX2ze_UWCdX3WAWxeuK4')
+    updater = Updater(token = '441243370:AAFADtpDKCcfVxdlmvnuY36fVhDQPeU3cJM')
     dispatcher = updater.dispatcher
 
     sql_deletion = threading.Thread(target = delete_data)
