@@ -1,4 +1,13 @@
-# watch2gether
-Telegram Bot to help lonely people watching video togather
+# PLAYERUNKNOWN'S VIDEO GROUND
 
-This is a team assement for 5 awesome bros. Winner Winner Chicken Dinner!
+PUVG-bot is a computer thinking class assignment.
+
+Contributors:
+
+- Chen Peng Fei
+- Chua Yong Seng
+- Kong Wye Chang
+- KWAN YU TING
+- Lusi
+
+Winner Winner Chicken Dinner!
